@@ -6,23 +6,23 @@ import BottomBannerShort from "../assets/svg/bottom-banner-short.svg";
 
 import styles from "../styles/Home.module.css";
 
-const contenido = [
-  {
-    svg: [<IconBook />],
-    titulo: `"Los días de Frida"`,
-    desc: "Cómic del día a día de Frida, una perrita de edad avanzada que vive en el albergue y comparte su día con sus hermanos perros y los humanos que los cuidan.",
-  },
-  {
-    svg: [<IconController />],
-    titulo: `"La ciudad y los perritos"`,
-    desc: "Juego RPG en el que tienes que ayudar a Reina, una de las perritas recientes del albergue, a encontrar a todos los perritos dispersos en la ciudad de Lima.",
-  },
-  {
-    svg: [<IconShopping />],
-    titulo: "Merch y regalos",
-    desc: "Puedes colaborar con el albergue comprando la mercadería que ofrecemos. Todo el dinero recaudado será destinado al mantenimiento del albergue.",
-  },
-];
+// const contenido = [
+//   {
+//     svg: [<IconBook />],
+//     titulo: `"Los días de Frida"`,
+//     desc: "Cómic del día a día de Frida, una perrita de edad avanzada que vive en el albergue y comparte su día con sus hermanos perros y los humanos que los cuidan.",
+//   },
+//   {
+//     svg: [<IconController />],
+//     titulo: `"La ciudad y los perritos"`,
+//     desc: "Juego RPG en el que tienes que ayudar a Reina, una de las perritas recientes del albergue, a encontrar a todos los perritos dispersos en la ciudad de Lima.",
+//   },
+//   {
+//     svg: [<IconShopping />],
+//     titulo: "Merch y regalos",
+//     desc: "Puedes colaborar con el albergue comprando la mercadería que ofrecemos. Todo el dinero recaudado será destinado al mantenimiento del albergue.",
+//   },
+// ];
 
 export default function ProyectoContenido() {
   return (
@@ -32,7 +32,7 @@ export default function ProyectoContenido() {
       <section className={styles.proyectoContenido}>
         <h1>+ CONTENIDO</h1>
 
-        <div className={styles.contenidoList}>
+        {/* <div className={styles.contenidoList}>
           {contenido.map((c, index) => {
             return (
               <div key={index} className={styles.contenidoItem}>
@@ -42,6 +42,38 @@ export default function ProyectoContenido() {
               </div>
             );
           })}
+        </div> */}
+
+        <div className={styles.contenidoList}>
+          <div className={styles.contenidoItem}>
+            <IconBook />
+            <h2>"Los días de Frida"</h2>
+            <p>
+              Cómic del día a día de Frida, una perrita de edad avanzada que
+              vive en el albergue y comparte su día con sus hermanos perros y
+              los humanos que los cuidan.
+            </p>
+          </div>
+
+          <div className={styles.contenidoItem}>
+            <IconController />
+            <h2>"La ciudad y los perritos"</h2>
+            <p>
+              Juego RPG en el que tienes que ayudar a Reina, una de las perritas
+              recientes del albergue, a encontrar a todos los perritos dispersos
+              en la ciudad de Lima.
+            </p>
+          </div>
+
+          <div className={styles.contenidoItem}>
+            <IconShopping />
+            <h2>Merch y regalos</h2>
+            <p>
+              Puedes colaborar con el albergue comprando la mercadería que
+              ofrecemos. Todo el dinero recaudado será destinado al
+              mantenimiento del albergue.
+            </p>
+          </div>
         </div>
       </section>
 
