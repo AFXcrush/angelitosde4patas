@@ -1,0 +1,106 @@
+@use "../variables/color" as c;
+@use "../variables/size" as s;
+@use "../variables/font" as f;
+@use "../variables/globalStyles" as gs;
+
+// *******------- PROYECTO INFO -------*******
+// *******------- PROYECTO INFO -------*******
+// *******------- PROYECTO INFO -------*******
+
+.proyectoContainer {
+  width: 100%;
+
+  .proyecto {
+    width: 100%;
+
+    .proyectoInfo {
+      @include gs.contentWidth;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+      color: c.$secondary;
+
+      h1 {
+        @include gs.tituloGrande;
+        margin-top: s.space(s6);
+      }
+
+      iframe {
+        width: 100%;
+        aspect-ratio: 16/9;
+      }
+
+      .titulo {
+        font-size: s.size(medium);
+        font-weight: f.weight(f3);
+        margin: s.space(s5) 0;
+      }
+
+      .descripcion {
+        width: 60%;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+// *******------- PROYECTO CONTENIDO -------*******
+// *******------- PROYECTO CONTENIDO -------*******
+// *******------- PROYECTO CONTENIDO -------*******
+
+.proyectoContenidoContainer {
+  margin-top: s.space(s7);
+}
+
+.proyectoContenido {
+  width: 100%;
+  min-height: 100vh;
+  background-color: c.$primary;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    @include gs.tituloGrande;
+    text-align: center;
+  }
+
+  .contenidoList {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    color: c.$secondary;
+    padding: s.space(s6);
+
+    svg {
+      height: 100px;
+      display: block;
+      fill: c.$secondary;
+      cursor: pointer;
+
+      &:hover {
+        fill: c.$white;
+        transition: 0.3s;
+      }
+    }
+
+    .contenidoItem {
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h2 {
+        font-size: s.size(medium);
+        margin: s.space(s5) 0;
+      }
+
+      p {
+        text-align: justify;
+      }
+    }
+  }
+}

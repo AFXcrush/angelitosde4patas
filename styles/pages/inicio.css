@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Rubik:wght@300;400;500&display=swap");
+.infoSection {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.huellas {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.huella1 {
+  position: absolute;
+  top: 0;
+  fill: #e9c39e;
+  height: 100%;
+  overflow: hidden;
+  left: -50px;
+}
+
+.huella2 {
+  position: absolute;
+  top: 0;
+  fill: #e9c39e;
+  height: 100%;
+  overflow: hidden;
+  right: -50px;
+}
+
+.indexContent {
+  width: 65%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+@media (max-width: 1200px) {
+  .indexContent {
+    width: 70%;
+  }
+}
+@media (max-width: 992px) {
+  .indexContent {
+    width: 75%;
+  }
+}
+@media (max-width: 768px) {
+  .indexContent {
+    width: 85%;
+  }
+}
+@media (max-width: 576px) {
+  .indexContent {
+    width: 95%;
+  }
+}
+.indexContent .angelitosLogoFull {
+  display: block;
+  width: 45%;
+}
+.indexContent .banners {
+  width: 55%;
+  margin-left: 6.25rem;
+}
+.indexContent .banners p {
+  color: #b25817;
+  text-align: justify;
+}
+.indexContent .bannerInfo {
+  padding: 3rem;
+  border: 2px solid #b25817;
+  border-radius: 3rem;
+  margin-bottom: 2rem;
+}
+.indexContent .bannerInfo p {
+  font-size: 1.6rem;
+}
+.indexContent .bannerInfo strong {
+  font-family: "Fredoka One", sans-serif;
+  font-size: 2rem;
+}
+.indexContent .bannerApoyo {
+  padding: 1.5rem 0 1rem 0;
+  background-color: #e9c39e;
+  border-radius: 2rem;
+}
+.indexContent .bannerApoyo .parrafoApoyo {
+  font-size: 1.3rem;
+  padding: 0 3rem;
+}
+.indexContent .bannerApoyo .apoyoOptions {
+  width: 100%;
+  display: flex;
+  border-top: 4px solid white;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+}
+.indexContent .bannerApoyo .apoyoOption {
+  width: 50%;
+  font-family: "Fredoka One", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+.indexContent .bannerApoyo .apoyoOption:hover {
+  color: #b25817;
+  transition: 0.3s;
+}
+.indexContent .bannerApoyo .apoyoOption1 {
+  border-right: 4px solid white;
+}
+
+.angelitosSectionContainer {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.huellaGrande {
+  position: absolute;
+  display: block;
+  width: 300px;
+  fill: white;
+  top: 50%;
+  right: -60px;
+}
+
+.bottomBannerBigAngelitosSection, .bottomBannerBigAngelitosSectionWhite {
+  display: block;
+  width: 100%;
+  fill: #e9c39e;
+  transform: scale(-1, -1);
+}
+
+.bottomBannerWhiteContainer {
+  width: 100%;
+  background-color: #e9c39e;
+}
+
+.bottomBannerBigAngelitosSectionWhite {
+  fill: white;
+}
+
+.angelitosSection {
+  width: 100%;
+  background-color: #e9c39e;
+  display: flex;
+  padding: 6.25rem;
+}
+.angelitosSection .fotoBurbuja {
+  width: 40%;
+}
+.angelitosSection .infoAngelitos {
+  width: 60%;
+  padding-left: 1.5rem;
+}
+.angelitosSection .infoAngelitos h1 {
+  font-family: "Fredoka One", sans-serif;
+  font-size: 3rem;
+  color: #b25817;
+  margin-bottom: 3rem;
+}
+.angelitosSection .infoAngelitos p {
+  font-size: 1.6rem;
+  color: #b25817;
+}
+.angelitosSection .infoAngelitos button {
+  color: #b25817;
+  font-family: "Fredoka One", sans-serif;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  font-size: 2rem;
+}
+.angelitosSection .infoAngelitos button:hover {
+  color: white;
+  background-color: #b25817;
+  transition: 0.3s;
+}
+.angelitosSection .angelitosListContainer {
+  display: flex;
+  margin: 3rem 0;
+}
+.angelitosSection .angelitosListContainer .angelitosRandom {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+}
+.angelitosSection .angelitosListContainer .angelitosRandom .perrituFotoContainer {
+  width: 189px;
+  height: 189px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.angelitosSection .angelitosListContainer .angelitosRandom .perrituFotoContainer:hover {
+  filter: brightness(1.5);
+  transition: 0.3s;
+}
+.angelitosSection .angelitosListContainer .angelitosRandom .perritusThumbnails {
+  margin-top: 1rem;
+}
+.angelitosSection .angelitosListContainer .angelitosRandom .perritusThumbnails p {
+  text-align: center;
+}
+.angelitosSection .angelitosListContainer .angelitosRandom .perritusThumbnails .perrituInfoNombre {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.angelitosSection .angelitosListContainer .angelitosRandom .perritusThumbnails .perrituInfoEdad {
+  font-size: 1rem;
+}

@@ -1,0 +1,72 @@
+@use "../variables/color" as c;
+@use "../variables/font" as f;
+@use "../variables/size" as s;
+@use "../variables//breakpoints" as b;
+@use "../variables/globalStyles" as gs;
+
+.menuBar {
+  width: 100%;
+
+  nav {
+    width: 100%;
+    height: 100px;
+    background-color: c.$primary;
+
+    ul {
+      @include gs.contentWidth;
+      margin: 0 auto;
+      padding-top: s.space(s4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    a {
+      color: c.$secondary;
+      font-weight: f.weight(f3);
+
+      &:hover {
+        color: c.$white;
+        transition: 0.3s;
+      }
+    }
+
+    button {
+      @include gs.botonBlanco;
+      font-size: s.size(normal);
+    }
+  }
+
+  .menuBarLogo {
+    width: 100px;
+
+    svg {
+      width: 100%;
+
+      &:hover {
+        transform: scale(1.03);
+        transition: 0.3s;
+      }
+    }
+  }
+
+  .bottomNavBig {
+    display: block;
+    width: 100%;
+    fill: c.$primary;
+
+    @include b.md {
+      display: none;
+    }
+  }
+
+  .bottomNavShort {
+    display: none;
+    width: 100%;
+    fill: c.$primary;
+
+    @include b.md {
+      display: block;
+    }
+  }
+}

@@ -1,116 +1,551 @@
-.container {
-  padding: 0 2rem;
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Rubik:wght@300;400;500&display=swap");
+.menuBar {
+  width: 100%;
+}
+.menuBar nav {
+  width: 100%;
+  height: 100px;
+  background-color: #e9c39e;
+}
+.menuBar nav ul {
+  width: 65%;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1200px) {
+  .menuBar nav ul {
+    width: 70%;
+  }
+}
+@media (max-width: 992px) {
+  .menuBar nav ul {
+    width: 75%;
+  }
+}
+@media (max-width: 768px) {
+  .menuBar nav ul {
+    width: 85%;
+  }
+}
+@media (max-width: 576px) {
+  .menuBar nav ul {
+    width: 95%;
+  }
+}
+.menuBar nav a {
+  color: #b25817;
+  font-weight: 500;
+}
+.menuBar nav a:hover {
+  color: white;
+  transition: 0.3s;
+}
+.menuBar nav button {
+  color: #b25817;
+  font-family: "Fredoka One", sans-serif;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.menuBar nav button:hover {
+  color: white;
+  background-color: #b25817;
+  transition: 0.3s;
+}
+.menuBar .menuBarLogo {
+  width: 100px;
+}
+.menuBar .menuBarLogo svg {
+  width: 100%;
+}
+.menuBar .menuBarLogo svg:hover {
+  transform: scale(1.03);
+  transition: 0.3s;
+}
+.menuBar .bottomNavBig {
+  display: block;
+  width: 100%;
+  fill: #e9c39e;
+}
+@media (max-width: 768px) {
+  .menuBar .bottomNavBig {
+    display: none;
+  }
+}
+.menuBar .bottomNavShort {
+  display: none;
+  width: 100%;
+  fill: #e9c39e;
+}
+@media (max-width: 768px) {
+  .menuBar .bottomNavShort {
+    display: block;
+  }
 }
 
-.main {
+.footer, .footercolor {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+.footer .footerRedesSection, .footercolor .footerRedesSection {
+  width: 140px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .footerRedesSection svg, .footercolor .footerRedesSection svg {
+  width: 52px;
+  display: block;
+  fill: #b25817;
+  cursor: pointer;
+}
+.footer .footerRedesSection svg:hover, .footercolor .footerRedesSection svg:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+.footer .footerInfo, .footercolor .footerInfo {
+  margin-left: 40px;
+  width: 40%;
+}
+.footer .footerInfo p, .footercolor .footerInfo p {
+  color: #b25817;
+  font-size: 1.3rem;
+}
+
+.footercolor {
+  background-color: #e9c39e;
+}
+
+.infoSection {
+  width: 100%;
   min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.huellas {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.huella1 {
+  position: absolute;
+  top: 0;
+  fill: #e9c39e;
+  height: 100%;
+  overflow: hidden;
+  left: -50px;
+}
+
+.huella2 {
+  position: absolute;
+  top: 0;
+  fill: #e9c39e;
+  height: 100%;
+  overflow: hidden;
+  right: -50px;
+}
+
+.indexContent {
+  width: 65%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+@media (max-width: 1200px) {
+  .indexContent {
+    width: 70%;
+  }
+}
+@media (max-width: 992px) {
+  .indexContent {
+    width: 75%;
+  }
+}
+@media (max-width: 768px) {
+  .indexContent {
+    width: 85%;
+  }
+}
+@media (max-width: 576px) {
+  .indexContent {
+    width: 95%;
+  }
+}
+.indexContent .angelitosLogoFull {
+  display: block;
+  width: 45%;
+}
+.indexContent .banners {
+  width: 55%;
+  margin-left: 6.25rem;
+}
+.indexContent .banners p {
+  color: #b25817;
+  text-align: justify;
+}
+.indexContent .bannerInfo {
+  padding: 3rem;
+  border: 2px solid #b25817;
+  border-radius: 3rem;
+  margin-bottom: 2rem;
+}
+.indexContent .bannerInfo p {
+  font-size: 1.6rem;
+}
+.indexContent .bannerInfo strong {
+  font-family: "Fredoka One", sans-serif;
+  font-size: 2rem;
+}
+.indexContent .bannerApoyo {
+  padding: 1.5rem 0 1rem 0;
+  background-color: #e9c39e;
+  border-radius: 2rem;
+}
+.indexContent .bannerApoyo .parrafoApoyo {
+  font-size: 1.3rem;
+  padding: 0 3rem;
+}
+.indexContent .bannerApoyo .apoyoOptions {
+  width: 100%;
+  display: flex;
+  border-top: 4px solid white;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+}
+.indexContent .bannerApoyo .apoyoOption {
+  width: 50%;
+  font-family: "Fredoka One", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+.indexContent .bannerApoyo .apoyoOption:hover {
+  color: #b25817;
+  transition: 0.3s;
+}
+.indexContent .bannerApoyo .apoyoOption1 {
+  border-right: 4px solid white;
+}
+
+.angelitosSectionContainer {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.huellaGrande {
+  position: absolute;
+  display: block;
+  width: 300px;
+  fill: white;
+  top: 50%;
+  right: -60px;
+}
+
+.bottomBannerBigAngelitosSection, .bottomBannerBigAngelitosSectionWhite {
+  display: block;
+  width: 100%;
+  fill: #e9c39e;
+  transform: scale(-1, -1);
+}
+
+.bottomBannerWhiteContainer {
+  width: 100%;
+  background-color: #e9c39e;
+}
+
+.bottomBannerBigAngelitosSectionWhite {
+  fill: white;
+}
+
+.angelitosSection {
+  width: 100%;
+  background-color: #e9c39e;
+  display: flex;
+  padding: 6.25rem;
+}
+.angelitosSection .fotoBurbuja {
+  width: 40%;
+}
+.angelitosSection .infoAngelitos {
+  width: 60%;
+  padding-left: 1.5rem;
+}
+.angelitosSection .infoAngelitos h1 {
+  font-family: "Fredoka One", sans-serif;
+  font-size: 3rem;
+  color: #b25817;
+  margin-bottom: 3rem;
+}
+.angelitosSection .infoAngelitos p {
+  font-size: 1.6rem;
+  color: #b25817;
+}
+.angelitosSection .infoAngelitos button {
+  color: #b25817;
+  font-family: "Fredoka One", sans-serif;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  font-size: 2rem;
+}
+.angelitosSection .infoAngelitos button:hover {
+  color: white;
+  background-color: #b25817;
+  transition: 0.3s;
+}
+.angelitosSection .angelitosListContainer {
+  display: flex;
+  margin: 3rem 0;
+}
+.angelitosSection .angelitosListContainer .angelitosRandom {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+}
+.angelitosSection .angelitosListContainer .angelitosRandom .perrituFotoContainer {
+  width: 189px;
+  height: 189px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.angelitosSection .angelitosListContainer .angelitosRandom .perrituFotoContainer:hover {
+  filter: brightness(1.5);
+  transition: 0.3s;
+}
+.angelitosSection .angelitosListContainer .angelitosRandom .perritusThumbnails {
+  margin-top: 1rem;
+}
+.angelitosSection .angelitosListContainer .angelitosRandom .perritusThumbnails p {
+  text-align: center;
+}
+.angelitosSection .angelitosListContainer .angelitosRandom .perritusThumbnails .perrituInfoNombre {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.angelitosSection .angelitosListContainer .angelitosRandom .perritusThumbnails .perrituInfoEdad {
+  font-size: 1rem;
+}
+
+.proyectoContainer {
+  width: 100%;
+}
+.proyectoContainer .proyecto {
+  width: 100%;
+}
+.proyectoContainer .proyecto .proyectoInfo {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  color: #b25817;
+}
+@media (max-width: 1200px) {
+  .proyectoContainer .proyecto .proyectoInfo {
+    width: 70%;
+  }
+}
+@media (max-width: 992px) {
+  .proyectoContainer .proyecto .proyectoInfo {
+    width: 75%;
+  }
+}
+@media (max-width: 768px) {
+  .proyectoContainer .proyecto .proyectoInfo {
+    width: 85%;
+  }
+}
+@media (max-width: 576px) {
+  .proyectoContainer .proyecto .proyectoInfo {
+    width: 95%;
+  }
+}
+.proyectoContainer .proyecto .proyectoInfo h1 {
+  font-family: "Fredoka One", sans-serif;
+  font-size: 3rem;
+  color: #b25817;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+.proyectoContainer .proyecto .proyectoInfo iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+.proyectoContainer .proyecto .proyectoInfo .titulo {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 2rem 0;
+}
+.proyectoContainer .proyecto .proyectoInfo .descripcion {
+  width: 60%;
+  text-align: justify;
+}
+
+.proyectoContenidoContainer {
+  margin-top: 6.25rem;
+}
+
+.proyectoContenido {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #e9c39e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.proyectoContenido h1 {
+  font-family: "Fredoka One", sans-serif;
+  font-size: 3rem;
+  color: #b25817;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.proyectoContenido .contenidoList {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  color: #b25817;
+  padding: 3rem;
+}
+.proyectoContenido .contenidoList svg {
+  height: 100px;
+  display: block;
+  fill: #b25817;
+  cursor: pointer;
+}
+.proyectoContenido .contenidoList svg:hover {
+  fill: white;
+  transition: 0.3s;
+}
+.proyectoContenido .contenidoList .contenidoItem {
+  width: 20%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.proyectoContenido .contenidoList .contenidoItem h2 {
+  font-size: 1.3rem;
+  margin: 2rem 0;
+}
+.proyectoContenido .contenidoList .contenidoItem p {
+  text-align: justify;
+}
 
-.footer {
+.visitaVirtualContainer {
+  width: 100%;
+  height: 100vh;
+  position: relative;
   display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+.visitaVirtual {
+  width: 75%;
 }
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
+.visitaVirtual h1 {
+  font-family: "Fredoka One", sans-serif;
+  font-size: 3rem;
+  color: #b25817;
+  margin-bottom: 3rem;
   text-align: center;
 }
 
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+.visitaVirtualImg {
+  width: 100%;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.bottomBannerBigAngelitosSectionColor {
+  display: block;
+  width: 100%;
+  fill: #e9c39e;
+  transform: scale(-1, -1);
 }
 
-.grid {
+.angelitosContainer {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
   display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
 }
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+.angelitosContainer .angelitos {
+  width: 65%;
+  padding: 3rem 0;
 }
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+@media (max-width: 1200px) {
+  .angelitosContainer .angelitos {
+    width: 70%;
   }
+}
+@media (max-width: 992px) {
+  .angelitosContainer .angelitos {
+    width: 75%;
+  }
+}
+@media (max-width: 768px) {
+  .angelitosContainer .angelitos {
+    width: 85%;
+  }
+}
+@media (max-width: 576px) {
+  .angelitosContainer .angelitos {
+    width: 95%;
+  }
+}
+.angelitosContainer .angelitos h1 {
+  font-family: "Fredoka One", sans-serif;
+  font-size: 3rem;
+  color: #b25817;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.angelitosContainer .angelitos .angelitosItemsContainer {
+  height: 100vh;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto;
+}
+.angelitosContainer .angelitos .angelitosItemsContainer .angelitosItem {
+  position: relative;
+  margin: 0 auto 2rem auto;
+}
+.angelitosContainer .angelitos .angelitosItemsContainer .angelitosItem .angelitosItemNombre {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 64px;
+  background-color: rgba(255, 255, 255, 0.75);
+  z-index: 2;
+}
+.angelitosContainer .angelitos .angelitosItemsContainer .angelitosItem .angelitosItemNombre p {
+  margin: 1rem;
+  font-family: "Fredoka One", sans-serif;
+  color: #b25817;
 }

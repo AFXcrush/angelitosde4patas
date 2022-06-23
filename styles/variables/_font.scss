@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Rubik:wght@300;400;500&display=swap");
+
+$primary: "Rubik", cursive;
+$secondary: "Fredoka One", sans-serif;
+
+$weight: (
+  f1: 300,
+  f2: 400,
+  f3: 500,
+);
+
+@function weight($w) {
+  @return map-get($weight, $w);
+}

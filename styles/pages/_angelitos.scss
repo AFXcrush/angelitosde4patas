@@ -1,0 +1,49 @@
+@use "../variables/color" as c;
+@use "../variables/size" as s;
+@use "../variables/font" as f;
+@use "../variables/globalStyles" as gs;
+
+.angelitosContainer {
+  @include gs.contenidoCentrado;
+  display: flex;
+  justify-content: center;
+
+  .angelitos {
+    @include gs.contentWidth;
+    padding: s.space(s6) 0;
+
+    h1 {
+      @include gs.tituloGrande;
+      text-align: center;
+    }
+
+    .angelitosItemsContainer {
+      height: 100vh;
+      overflow: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin: 0 auto;
+
+      .angelitosItem {
+        position: relative;
+        margin: 0 auto s.space(s5) auto;
+
+        .angelitosItemNombre {
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 64px;
+          background-color: rgba(c.$white, 0.75);
+          z-index: 2;
+
+          p {
+            margin: s.space(s3);
+            font-family: f.$secondary;
+            color: c.$secondary;
+          }
+        }
+      }
+    }
+  }
+}

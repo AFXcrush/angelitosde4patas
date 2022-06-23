@@ -1,0 +1,55 @@
+@use "./color" as c;
+@use "./font" as f;
+@use "./size" as s;
+@use "./breakpoints" as b;
+
+@mixin contentWidth {
+  width: 65%;
+
+  @include b.xl {
+    width: 70%;
+  }
+
+  @include b.lg {
+    width: 75%;
+  }
+
+  @include b.md {
+    width: 85%;
+  }
+
+  @include b.sm {
+    width: 95%;
+  }
+}
+
+@mixin botonBlanco {
+  color: c.$secondary;
+  font-family: f.$secondary;
+  padding: s.space(s2) s.space(s3);
+  background-color: c.$white;
+  border: none;
+  border-radius: s.space(s4);
+  cursor: pointer;
+
+  &:hover {
+    color: c.$white;
+    background-color: c.$secondary;
+    transition: 0.3s;
+  }
+}
+
+@mixin contenidoCentrado {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+@mixin tituloGrande {
+  font-family: f.$secondary;
+  font-size: s.size(bigger);
+  color: c.$secondary;
+  margin-bottom: s.space(s6);
+}

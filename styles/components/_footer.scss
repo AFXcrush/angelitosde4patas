@@ -1,0 +1,43 @@
+@use "../variables/color" as c;
+@use "../variables/size" as s;
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: s.space(s5) 0;
+
+  .footerRedesSection {
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+
+    svg {
+      width: 52px;
+      display: block;
+      fill: c.$secondary;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
+      }
+    }
+  }
+
+  .footerInfo {
+    margin-left: 40px;
+    width: 40%;
+
+    p {
+      color: c.$secondary;
+      font-size: s.size(medium);
+    }
+  }
+}
+
+.footercolor {
+  @extend .footer;
+  background-color: c.$primary;
+}

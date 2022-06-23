@@ -1,0 +1,224 @@
+@use "../variables/color" as c;
+@use "../variables/size" as s;
+@use "../variables/font" as f;
+@use "../variables/breakpoints" as b;
+@use "../variables/globalStyles" as gs;
+
+// ----*******---- PRIMERA SECCIÓN ----*******----
+// ----*******---- PRIMERA SECCIÓN ----*******----
+// ----*******---- PRIMERA SECCIÓN ----*******----
+
+.infoSection {
+  @include gs.contenidoCentrado;
+}
+
+@mixin huellas {
+  position: absolute;
+  top: 0;
+  fill: c.$primary;
+  height: 100%;
+  overflow: hidden;
+}
+
+.huellas {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.huella1 {
+  @include huellas;
+  left: -50px;
+}
+
+.huella2 {
+  @include huellas;
+  right: -50px;
+}
+
+.indexContent {
+  @include gs.contentWidth;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+
+  .angelitosLogoFull {
+    display: block;
+    width: 45%;
+  }
+
+  .banners {
+    width: 55%;
+    margin-left: s.space(s7);
+
+    p {
+      color: c.$secondary;
+      text-align: justify;
+    }
+  }
+
+  .bannerInfo {
+    padding: s.space(s6);
+    border: 2px solid c.$secondary;
+    border-radius: s.space(s6);
+    margin-bottom: s.space(s5);
+
+    p {
+      font-size: s.size(almostbig);
+    }
+
+    strong {
+      font-family: f.$secondary;
+      font-size: s.size(big);
+    }
+  }
+
+  .bannerApoyo {
+    padding: s.space(s4) 0 s.space(s3) 0;
+
+    background-color: c.$primary;
+    border-radius: s.space(s5);
+
+    .parrafoApoyo {
+      font-size: s.size(medium);
+      padding: 0 s.space(s6);
+    }
+
+    .apoyoOptions {
+      width: 100%;
+      display: flex;
+      border-top: 4px solid c.$white;
+      margin-top: s.space(s4);
+      padding-top: s.space(s3);
+    }
+
+    .apoyoOption {
+      width: 50%;
+      font-family: f.$secondary;
+      font-size: s.size(big);
+      text-align: center;
+      color: c.$white;
+      cursor: pointer;
+
+      &:hover {
+        color: c.$secondary;
+        transition: 0.3s;
+      }
+    }
+
+    .apoyoOption1 {
+      border-right: 4px solid c.$white;
+    }
+  }
+}
+
+// ----*******---- SEGUNDA SECCIÓN ----*******----
+// ----*******---- SEGUNDA SECCIÓN ----*******----
+// ----*******---- SEGUNDA SECCIÓN ----*******----
+
+.angelitosSectionContainer {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.huellaGrande {
+  position: absolute;
+  display: block;
+  width: 300px;
+  fill: c.$white;
+  top: 50%;
+  right: -60px;
+}
+
+.bottomBannerBigAngelitosSection {
+  display: block;
+  width: 100%;
+  fill: c.$primary;
+  transform: scale(-1, -1);
+}
+
+.bottomBannerWhiteContainer {
+  width: 100%;
+  background-color: c.$primary;
+}
+
+.bottomBannerBigAngelitosSectionWhite {
+  @extend .bottomBannerBigAngelitosSection;
+  fill: c.$white;
+}
+
+.angelitosSection {
+  width: 100%;
+  background-color: c.$primary;
+  display: flex;
+  padding: s.space(s7);
+
+  .fotoBurbuja {
+    width: 40%;
+  }
+
+  .infoAngelitos {
+    width: 60%;
+    padding-left: s.space(s4);
+
+    h1 {
+      @include gs.tituloGrande;
+    }
+
+    p {
+      font-size: s.size(almostbig);
+      color: c.$secondary;
+    }
+
+    button {
+      @include gs.botonBlanco;
+      font-size: s.size(big);
+    }
+  }
+
+  .angelitosListContainer {
+    display: flex;
+    margin: s.space(s6) 0;
+
+    .angelitosRandom {
+      display: flex;
+      flex-direction: column;
+      margin-right: s.space(s5);
+
+      .perrituFotoContainer {
+        width: 189px;
+        height: 189px;
+        border-radius: 50%;
+        overflow: hidden;
+        cursor: pointer;
+
+        &:hover {
+          filter: brightness(1.5);
+          transition: 0.3s;
+        }
+      }
+
+      .perritusThumbnails {
+        margin-top: s.space(s3);
+
+        p {
+          text-align: center;
+        }
+
+        .perrituInfoNombre {
+          font-size: s.size(medium);
+          font-weight: f.weight(f3);
+        }
+
+        .perrituInfoEdad {
+          font-size: s.size(normal);
+        }
+      }
+    }
+  }
+}
