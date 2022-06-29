@@ -13,7 +13,7 @@ export default function Footer({ color }) {
 
       <section className={styles.footerInfo}>
         <p>
-          ALBERGUE ANGELITOS DE 4 PATAS | 2022 TODOS LOS DERECHOS RESEVADOS
+          ALBERGUE ANGELITOS DE 4 PATAS | 2022 TODOS LOS DERECHOS RESERVADOS
           <br></br>
           DESARROLLADO POR CARLOS CRUZ
         </p>
