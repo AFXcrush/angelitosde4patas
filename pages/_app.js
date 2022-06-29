@@ -14,16 +14,17 @@ function MyApp({ Component, pageProps }) {
   return (
     <ApolloProvider client={client}>
       <Script
+        id="analyticsSrc"
         strategy="lazyOnload"
-        src="https://www.googletagmanager.com/gtag/js?id=G-JCR5Q5BWZW"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_ID}`}
       />
 
-      <Script strategy="lazyOnload">
+      <Script id="analyticsFunction" strategy="lazyOnload">
         {`window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
           
-          gtag('config', 'G-JCR5Q5BWZW');`}
+          gtag('config', ${process.env.GOOGLE_ANALYTICS_ID});`}
       </Script>
       <Component {...pageProps} />
     </ApolloProvider>
