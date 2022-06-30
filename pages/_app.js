@@ -31,7 +31,6 @@ function MyApp({ Component, pageProps }) {
   return (
     <ApolloProvider client={client}>
       <Script
-        id="analytics-src"
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_ID}`}
       />
