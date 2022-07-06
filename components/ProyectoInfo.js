@@ -6,16 +6,14 @@ export default function ProyectoInfo() {
       <h1>Proyecto</h1>
 
       <iframe
-        src="https://www.youtube.com/embed/O-4lIoCfQ4M"
+        src="https://www.youtube.com/embed/yGTbMGzEuPo"
         title="YouTube video player"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
 
-      <p className={styles.titulo}>
-        TRAILER "Angelitos de 4 patas" el documental
-      </p>
+      <p className={styles.titulo}>"Angelitos de 4 patas" el documental</p>
 
       <p className={styles.descripcion}>
         En el albergue "Angelitos de 4 patas" hay 23 perritos de avanzada edad

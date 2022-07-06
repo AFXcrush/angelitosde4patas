@@ -7,8 +7,21 @@ export default function Footer({ color }) {
   return (
     <div className={color}>
       <section className={styles.footerRedesSection}>
-        <LogoFB />
-        <LogoInsta />
+        <a
+          href="https://www.facebook.com/Angelitos-de-4-patas-113880594655011"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <LogoFB />
+        </a>
+
+        <a
+          href="https://www.instagram.com/bonelliprodu/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <LogoInsta />
+        </a>
       </section>
 
       <section className={styles.footerInfo}>

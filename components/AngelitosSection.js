@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 // import client from "../libs/apollo";
 // import { PERRITOS } from "../graphql/perritos";
 import BottomBannerBig from "../assets/svg/bottom-banner-big.svg";
@@ -81,7 +82,11 @@ export default function AngelitosSection() {
             ))}
           </div>
 
-          <button>CONOCER A TODOS</button>
+          <button>
+            <Link href={"/angelitos"}>
+              <a>CONOCER A TODOS</a>
+            </Link>
+          </button>
         </section>
       </div>
 
